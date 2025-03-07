@@ -70,42 +70,18 @@ a {
   padding-right: 2rem;
   border: solid 2px #ad64ef;
   border-radius: 4px;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .navbar button:hover {
 	opacity: 70%;
 }
 
-.dropdownbtn {
-    background-color: #ad64ef;
-    color: white;
-    padding: 2rem;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-items {
-    display: none;
-    position: absolute;
-    background-color: #333333;
-    z-index: 3;
-}
-
-.dropdown-items a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-items {
-    display: block;
-}
-
 .content {
-	text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+	text-align: left;
     position: absolute;
     background-color: #333333;
     width: 90%;
@@ -118,7 +94,14 @@ a {
     z-index: 0;
 }
 
+a {
+    width: fit-content;
+    text-decoration:none;
+    color:white
+}
+
 .cards {
+  overflow: hidden;
   padding: 5%;
   position: absolute;
   top: 70%;
