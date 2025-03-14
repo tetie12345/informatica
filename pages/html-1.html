@@ -1,0 +1,187 @@
+<HTML>
+  <head>
+  	<title>Floris' HTML tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href='../style/style.css'>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/trailer.js"></script>
+  </head>
+  <body>
+	<div id="trailer">
+	</div>
+	<div class="navbar">
+		<a class="interactable" href='index.html' style="width: fit-content"><button>Home</button></a>
+        <a class="interactable" style="width: fit-content"><button>About us</button></a>
+	</div>
+
+	<div class="content" style="height: fit-content">
+	  <p text-align: center><h1>PART 1: The Basics</h1></p>
+	  <p text-align: center><h2>Introduction to HTML</h2></p>
+
+      <p>An HTML file is created similarly to a text file in Notepad. You type the content and save the file, but instead of using the <i><b>.txt</b></i> extension, you use <i><b>.html or .htm.</b></i> Sometimes, file extensions are not immediately visible in Windows Explorer. You can check the extension by right-clicking the file and selecting &quot;Properties.&quot; <br>
+
+<p>Although you can write HTML code in Notepad, there are specialized editors that make the process easier. Well-known examples include <b><i>Notepad++, Visual Studio Code,</i></b> and <b><i>Netbeans.</i></b> These programs offer additional functionalities such as syntax highlighting and error detection, making HTML coding more efficient.</p>
+
+<p>
+Creating a new HTML page varies by editor, but usually, you start by creating a new file and saving it with the <i><b>.html</b></i> extension. It is important to choose a simple filename, preferably in lowercase and without spaces or special characters, such as <i>assignment1.html</i> or <i>homepage.html.</i> This helps prevent issues since some servers interpret spaces and special characters differently, for example, a space as &amp;20.</p>
+
+<p>
+Additionally, servers are often case-sensitive, meaning filenames must match exactly.
+To view an HTML page in a web browser, simply double-click the saved HTML document in Windows Explorer. The page will automatically open in your default browser.</p>
+
+<p>
+Errors can occur quickly when coding in HTML. A small mistake can cause the page to display incorrectly. Therefore, it is important to check and validate your code. Some editors, such as <b><i>Netbeans,</i></b> highlight errors immediately. You can also use online validators, such as the one from <i>W3C.</i> Here, you can paste your HTML code or upload a file to detect errors.
+
+<p>
+Keep in mind that validation programs do not always fix all errors. Sometimes, your code may be technically correct but not structured as intended. That is why it is always wise to manually review your code.
+</p>
+
+
+
+
+
+
+<img src="../content/Floris' theories/FlorisTheory1.png" alt="Theory 1" title="NEVER GONNA GIVE YOU UP (Sorry not sorry)" width="500">
+
+<p><h2>Getting started: The basic elements</h2></p>
+   
+   <p>An HTML5 file does not just contain text; it also describes objects such as hyperlinks and images. This is done using elements. An HTML5 file is entirely composed of elements, meaning that all parts of a webpage belong to a specific element.</p>
+<br>
+<p>
+One example is the <span class="tag-text">&lt;title&gt;</span> element, which defines the name of the webpage. Each element usually consists of three parts:</p>
+
+<ul>
+<li>A start tag, such as <span class="tag-text">&lt;title&gt;</span></li>
+<li>The content, for example, the page title</li>
+<li>An end tag, such as <span class="tag-text">&lt;/title&gt;</span></li>
+</ul>
+
+<p>Most elements have both a start and an end tag, but some elements without content only have a single tag. The content of an element must always be placed between the start and end tag. Additionally, it is important to write all element names in lowercase.</p>
+
+<br><h3>DOCTYPE Declaration</h3>
+<p>
+Every HTML file starts with a DOCTYPE declaration. This tells the web browser which version of HTML is being used. For HTML5, it is:</p>
+
+<h4>&lt;!DOCTYPE html&gt;</h4>
+
+<p>Although this declaration simply says "html" and does not explicitly mention "html5," it specifically applies to HTML5. In HTML4, the DOCTYPE declaration was much longer and more complex:</p>
+
+<h4>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd"&gt</h4><br>
+
+<img src="../content/Floris' Theories/FlorisTheory2a.png" alt="Theory 2" title="Theory 2" width="350">
+
+<h3>The &lt;html&gt; Element</h3>
+After the DOCTYPE declaration, the <span class="tag-text">&lt;html&gt;</span> element follows. This is the main element that contains all the HTML code for the webpage. An HTML5 file always includes exactly one <span class="tag-text">&lt;html&gt;</span> element, which houses all other elements. The basic structure looks like this:</p>
+
+<h4>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;/html&gt;
+</h4>
+
+<p>
+To specify the language of the webpage, you can extend the <span class="tag-text">&lt;html&gt;</span> element with a language attribute:</p>
+
+<h4>&lt;html lang="en"&gt;</h4>
+
+<p>This helps search engines and web browsers correctly interpret the language of the page.<br></p>
+
+<img src="../content/Floris' Theories/FlorisTheory2b.png" alt="Theory 2" title="Theory 2" width="350">
+
+<p>Inside the <span class="tag-text">&lt;html&gt;</span> element, two essential elements must always be present:</p>
+
+<ol>
+<li>The <span class="tag-text">&lt;head&gt;</span> element: Contains metadata about the webpage, such as the title and links to styles or scripts.</li>
+<li>The <span class="tag-text">&lt;body&gt;</span> element: Contains the actual content visible to the user, such as text, images, and links.</li>
+</ol>
+
+<p>All other HTML elements must be placed inside either the <span class="tag-text">&lt;head&gt;</span> or <span class="tag-text">&lt;body&gt;</span> element.</p>
+
+<p><h2>Let's talk about style: Headings, paragraphs, formatting, and characters</h2></p>
+
+<h3>Headings in HTML</h3>
+
+In HTML, you can use headings and subheadings to indicate titles and subtitles within your text. This works similarly to how headings function in <i>Microsoft Word.</i> The largest heading is inserted using the <span class="tag-text">&lt;h1&gt;</span> element. Web browsers automatically adjust the text size, making the heading bold and placing it on a new line.<br>
+
+If you need a smaller heading, you can use <span class="tag-text">&lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;,</span> or <span class="tag-text">&lt;h6&gt;.</span> There are six levels of headings in total, with <span class="tag-text">&lt;h1&gt;</span> being the largest and <span class="tag-text">&lt;h6&gt;</span> the smallest. The browser automatically reduces the text size for each successive heading level. Headings are important not only for structuring your webpage but also for search engine optimization <i>(SEO)</i>, as they help define the content hierarchy.
+
+<h3>Paragraphs in HTML</h3>
+
+<p>Like headings, paragraph text must be placed within an element. In HTML, a paragraph is created using the <span class="tag-text">&lt;p&gt;</span> element. Web browsers automatically add spacing between paragraphs, making the text easier to read.</p>
+
+For example:</p>
+
+<p><h4>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</h4></p>
+
+<p>If you add multiple spaces or extra line breaks inside a paragraph element, the browser will not display them. This happens because web browsers treat extra spaces as a single space and ignore additional line breaks.If you want to manually create a line break without starting a new paragraph, you should use the <span class="tag-text">&lt;br&gt;</span> element. This element does not need an end tag and forces text to move to the next line.</p>
+
+<p>Example:</p>
+
+<span class="tag-text">&lt;p&gt;This is a line of text.&lt;br&gt;This text appears on a new line.&lt;/p&gt;</span>
+
+<h3>Text Formatting in HTML</h3>
+
+Although CSS is used for most website styling, HTML provides some basic formatting options for text. Below are a few elements used to format text:<br>
+
+<ul>
+<li><b>Bold text:</b> &lt;b&gt;Bold text&lt;/b&gt; &rarr; <b>Bold</b></li>
+<li><b>Italic text:</b> &lt;i&gt;Italic text&lt;/i&gt; &rarr; <i>Italic</i></li>
+<li><b>Underlined text:</b> &lt;u&gt;Underlined text&lt;/u&gt; &rarr; <u>Underlined</u></li>
+<li><b>Emphasized text:</b> &lt;em&gt;Emphasized text&lt;/em&gt; &rarr; <em>Emphasized (for screen readers and SEO)</em></li>
+</ul>
+
+<img src="../content/Floris' theories/FlorisTheory3a.png" alt="Theory 3" title="Theory 3" width="368">
+<img src="../content/Floris' theories/FlorisTheory3b.png" alt="Theory 3" title="Theory 3" width="350">
+
+<h3>Special Characters in HTML</h3>
+
+<p>If you want to display certain characters, such as extra spaces or symbols, you need to use HTML entities. Below are some commonly used special characters:</p>
+
+<table border="1">
+	<tr>
+	<td>Code</td>
+	<td>Result</td>
+	<td>Name</td>
+</tr>
+<tr>
+<td>&amp;nbsp;</td>
+<td>&nbsp;</td>
+<td>Non-breaking space</td>
+</tr>
+<tr>
+<td>&amp;quot;</td>
+<td>&quot;</td>
+<td>Double quotation marks</td>
+</tr>
+<tr>
+<td>&amp;amp;</td>
+<td>&amp;</td>
+<td>Ampersand</td>
+</tr>
+<tr>
+<td>&amp;lt;</td>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>&amp;gt;</td>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+<td>&amp;copy;</td>
+<td>&copy;</td>
+<td>Copyright symbol</td>
+</tr>
+<tr>
+<td>&amp;euro;</td>
+<td>&euro;</td>
+<td>Euro symbol</td>
+</tr>
+</table>
+
+<p>These elements and characters help structure your webpage and ensure proper formatting across different browsers and devices.</p>
+
+	</div>
+  </body>
+</HTML>

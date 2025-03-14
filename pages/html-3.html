@@ -1,0 +1,132 @@
+<HTML>
+  <head>
+  	<title>Kiara's HTML tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href='../style/style.css'>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/trailer.js"></script>
+  </head>
+  <body>
+	<div id="trailer">
+	</div>
+	<div class="navbar">
+		<a class="interactable" href='index.html' style="width: fit-content"><button>Home</button></a>
+        <a class="interactable" style="width: fit-content"><button>About us</button></a>
+	</div>
+
+	<div class="content" style="height: fit-content">
+	  <p text-align: center><h1>PART 3: EMBEDS</h1></p>
+	  <p text-align: center><h2>Embedding Multimedia from 3rd-website parties</h2></p>
+
+<p>When building a website, you may want to display multimedia content from external sources, also known as <i>third-party content.</i> A common example is embedding a YouTube video directly into your webpage. To achieve this, you use the <i>iframe</i> (inline frame) element, which allows you to embed an external website or multimedia content within your own site.</p>
+
+<h3>Using i-frame</h3>
+
+<p>An iframe enables you to display an entire website within another webpage. The basic syntax looks like this:</p>
+
+<h4>
+&lt;iframe width="560" height="315" src="https://fundament-online.nl/"&gt;&lt;/iframe&gt;
+</h4>
+
+<p>However, some websites block iframe embedding for security reasons. If a website does not support iframe embedding, it will not be displayed inside the frame.</p>
+
+<h3>Embedding YouTube Videos in HTML</h3>
+
+<p>Embedding YouTube videos is one of the most useful applications of iframes. YouTube makes this process easy by providing an embedding feature.</p>
+
+<img src="../content/Charley's theories/CharleyTheory1a.png" alt="Theory 1" title="Ga ga ooh la la" width="350">
+
+<p>To embed a YouTube video:</p>
+
+<ol>
+<li>Go to the YouTube video you want to add to your site.</li>
+<li>Click on <i>“Share”</i> under the video.</li>
+<li>Select the <i>“Embed”</i> option.</li>
+<li>Copy the provided <span class="tag-text">&lt;iframe&gt;</span> code and paste it into your HTML file.<br>
+The embedded code typically looks like this:</li>
+
+<h4>
+&lt;iframe width="560" height="315"<br>
+src="https://www.youtube.com/embed/LMd8rG2WDbc"<br>
+frameborder="0"<br>
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen&gt;
+</ol>
+</h4>
+
+<h3>Breaking Down the Code</h3>
+
+<ul>
+<li><b>src attribute:</b></li>
+<p>The src (source) contains a special embed URL provided by YouTube. Notice that instead of the normal YouTube video URL, the embed URL includes "/embed/". You cannot simply copy the URL from the browser’s address bar; you must use the embed code that YouTube provides.</p>
+
+<li><b>width and height attributes:</b></li> 
+<p>These define the size of the iframe. You can adjust them to fit your layout.</p>
+
+<li><b>frameborder="0":</b></li>
+<p>This removes the default border around the iframe. If omitted, a thin border might appear.</p>
+
+<li><b>allowfullscreen:</b></li>
+<p>This enables fullscreen mode, allowing users to expand the video to full screen.</p>
+
+<li><b>Additional allow attributes:</b></li>
+</ul>
+
+<ol>
+<li>accelerometer: Enables motion-based controls.</li>
+<li>autoplay: Allows the video to play automatically (some browsers may block this).</li>
+<li>encrypted-media: Allows playback of encrypted content.</li>
+<li>gyroscope: Enables gyroscope-related functionality (often used in VR videos).</li>
+<li>picture-in-picture: Allows the video to be viewed in a small floating window.</li>
+</ol>
+
+<img src="../content/Charley's theories/CharleyTheory1b.png" alt="Theory 1" title="Okay I'll stop now" width="400">
+
+<h3>Customization Options</h3>
+
+<p>You can customize the appearance and behavior of the embedded video:</p>
+
+<ol>
+<li><b>Change Video Size</b></li>
+<p>Adjust the width and height attributes. Example:</p>
+
+<h4>
+&lt;iframe width="800" height="450" src="https://www.youtube.com/embed/log0epBEDbs?si=Cd--k9yvqqGwPTOD"&gt;&lt;/iframe&gt;
+</h4>
+
+<li>Autoplay the Video</li>
+<p>Add <span class="tag-text">?autoplay=1</span> to the URL. Example</p>
+
+<h4>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/log0epBEDbs?si=Cd--k9yvqqGwPTOD?autoplay=1"&gt;&lt;/iframe&gt;
+</h4>
+
+<p>Note: Some browsers block autoplay unless the video is muted <span class="tag-text">(mute=1)</span>.</p>
+
+<li>Start the Video at a Specific Time</li>
+<p>Add <span class="tag-text">?start=30</span> to start at 30 seconds. Example:</p>
+
+<h4>
+&lt;>iframe width="560" height="315" src="https://www.youtube.com/embed/log0epBEDbs?si=Cd--k9yvqqGwPTOD?start=30"&gt;&lt;/iframe&gt;
+</h4>
+
+<li>Hide Video Controls</li>
+<p>Add <span class="tag-text">?controls=0</span> to hide the play/pause buttons. Example:</p>
+
+<h4>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/log0epBEDbs?si=Cd--k9yvqqGwPTOD?controls=0"&gt;&lt;/iframe&gt;
+</h4>
+</ol>
+
+<h3>When Not to Use Iframes</h3>
+
+<p>While iframes are useful, they also have drawbacks:</p>
+
+<ul>
+<li>Some websites block embedding for security reasons.</li>
+<li>They can slow down your page load speed if too many are used.</li>
+<li>SEO Issues: Content inside an iframe is not indexed by search engines like Google.</li>
+</ul>
+
+</body>
+</html>

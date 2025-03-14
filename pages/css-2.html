@@ -1,0 +1,112 @@
+<HTML>
+  <head>
+  	<title>Charleys' HTML tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href='../style/style.css'>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/trailer.js"></script>
+  </head>
+  <body>
+	<div id="trailer">
+	</div>
+	<div class="navbar">
+		<a class="interactable" href='index.html' style="width: fit-content"><button>Home</button></a>
+        <a class="interactable" style="width: fit-content"><button>About us</button></a>
+	</div>
+
+	<div class="content" style="height: fit-content">
+<h1>PART 3: CSS Styling</h1>
+
+<h2>Styling Hyperlinks with CSS</h2>
+<p>• The <span class="tag-text">&lt;a&gt;</span> element is used to style hyperlinks.</p>
+
+<p>• Example:</p>
+<h4>a {
+    color: blue;
+}</h4>
+
+<p>• The <span class="tag-text">:hover</span> pseudo-class is used to change the appearance when a user hovers over a link:</p>
+<h4>a:hover {
+    color: darkblue;
+    text-decoration: none;
+}</h4>
+
+<p>• The <span class="tag-text">cursor</span> property allows customization of the mouse pointer when hovering over a link, such as changing it to a help cursor:</p>
+<h4>a:hover {
+    cursor: help;
+}</h4>
+
+<img src="../content/Charley's theories/CharleyTheory3a.png" alt="i'm all out of funny captions, and fuck alt texts who actually uses that" style="width: 32rem;">
+
+<h2>Lists in CSS</h2>
+<p>There are three types of lists in HTML:</p>
+<ul>
+    <li><b>Unordered lists (<span class="tag-text">&lt;ul&gt;</span>)</b> – Use bullet points (disc, square, etc.).</li>
+    <li><b>Ordered lists (<span class="tag-text">&lt;ol&gt;</span>)</b> – Use numbers or letters (1, A, I, etc.).</li>
+    <li><b>Definition lists (<span class="tag-text">&lt;dl&gt;</span>)</b> – Used for term-definition pairs.</li>
+</ul>
+
+<p>CSS allows customization of list markers with <span class="tag-text">list-style-type</span>:</p>
+<ul>
+    <li><b>Example for an unordered list with square bullets:</b></li>
+</ul>
+<h4>ul {
+    list-style-type: square;
+    color: blue;
+}</h4>
+
+<ul>
+    <li><b>Example for an ordered list with Roman numerals:</b></li>
+</ul>
+<h4>ol {
+    list-style-type: upper-roman;
+}</h4>
+
+<h2>Styling Tables with CSS</h2>
+<p>• By default, HTML tables have no borders, but they can be styled using CSS.</p>
+<p>• The <span class="tag-text">border</span> property allows customization of:</p>
+<ul>
+    <li><b>Thickness</b> (in pixels)</li>
+    <li><b>Border type</b> (solid, dotted, dashed, etc.)</li>
+    <li><b>Color</b></li>
+</ul>
+
+<p>Example:</p>
+<h4>table {
+    border: 1px solid black;
+}</h4>
+
+<p>• To apply the same border to table cells (<span class="tag-text">&lt;td&gt;</span>), use:</p>
+<h4>td {
+    border: 1px solid black;
+}</h4>
+
+<p>However, this creates a double border because both the table and cells have their own borders.</p>
+
+<img src="../content/Charley's theories/CharleyTheory3b.png" alt="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="width: 32rem;">
+
+<h2>Styling Tables with CSS (Continued)</h2>
+<p>• To remove the double border, use <span class="tag-text">border-collapse:</span></p>
+<h4>table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}</h4>
+
+<p>• By default, the table width adjusts based on content.</p>
+<p>• You can manually set the width using pixels or percentages:</p>
+<h4>table {
+    width: 250px;
+}</h4>
+
+<h2>Grouping Multiple HTML Elements in CSS</h2>
+<p>• Instead of writing separate CSS rules for similar elements, you can group them:</p>
+<h4>h1, h2, h3, h4 {
+    color: green;
+}</h4>
+
+<p>This applies the same style to all selected elements at once.</p>
+
+
+	</div>
+  </body>
+</HTML>

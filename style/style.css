@@ -18,6 +18,36 @@ body {
   height: 90%;
 }
 
+.tag-text {
+    font-family: Courier New;
+  font-size: 11.5pt;
+  color: #929596;
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+h2 {
+    font-family: Times New Roman;
+    font-size: 20pt;
+    color: white;
+}
+
+h3 {
+    font-family: Times New Roman;
+    font-size: 15pt;
+    color: white;
+    font-style: italic;
+}
+
+h4 {
+  font-family: Courier New;
+  font-size: 11.5pt;
+  color: #929596;
+  font-style: italic;
+  font-weight: normal;
+}
+
 body {
   display: grid;
   color: var(--fg);
@@ -114,7 +144,7 @@ a {
   inline-size: min(var(--max, 15rem), 100%);
 
   @media (min-width: 45rem) {
-    --count: 3;
+    --count: 2;
     --max: 100%;
   }
 }

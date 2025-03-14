@@ -1,0 +1,362 @@
+<HTML>
+  <head>
+  	<title>Kiara's HTML tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href='../style/style.css'>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/trailer.js"></script>
+  </head>
+  <body>
+	<div id="trailer">
+	</div>
+	<div class="navbar">
+		<a class="interactable" href='index.html' style="width: fit-content"><button>Home</button></a>
+        <a class="interactable" style="width: fit-content"><button>About us</button></a>
+	</div>
+
+	<div class="content" style="height: fit-content">
+	  <p text-align: center><h1>PART 2: Content</h1></p>
+	  <p text-align: center><h2>Inserting multimedia</h2></p>
+
+<h3>Hyperlinks in HTML</h3>
+
+<p>In printed books, references to other books require physically locating the correct page, which can be time-consuming. However, on the internet, this process is much simpler and faster using <i>hyperlinks.</i> A hyperlink allows users to click on a piece of text or an image to navigate to another webpage, document, or email.</p>
+
+<p>There are three main types of hyperlinks:</p>
+
+<ul>
+<li>Fixed URL (Absolute URL): Links to an external website <i>(e.g., https://www.google.com).</i></li>
+<li>Relative URL: Links to a subpage within the same website <i>(e.g., contact.html).</i></li>
+<li>Mailto URL: Links to an email address and opens the user&apos;s email client <i>(e.g., mailto:someone@example.com).</i></li>
+</ul>
+
+<h3>Hyperlink with a Fixed URL</h3>
+
+<p>A fixed URL points directly to an external website. Here&apos;s an example of how to create a hyperlink to Google:</p>
+
+<h4>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Example of a hyperlink&lt;/title&gt;<br>
+&nbsp;&lt;/head&gt;<br>
+
+&lt;body&gt;<br>
+   &nbsp;&nbsp; &lt;p&gt;A well-known website is &lt;a href="https://www.google.com"&gt;the search engine Google&lt;/a&gt;.&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&nbsp;&lt;/html&gt;<br>
+</h4>
+
+<p>In the code above, the phrase "the search engine Google" is enclosed within <span class="tag-text">&lt;a&gt;</span> tags, making it a clickable hyperlink. By default, web browsers style hyperlinks with blue text and underlining.
+The key part of the hyperlink is the <i>href</i> attribute inside the <span class="tag-text">&lt;a&gt;</span> tag:</p>
+
+<h4>
+	&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;<br>
+</h4>
+
+<ul>
+<li>The href attribute (Hypertext Reference) specifies the URL to which the hyperlink points.</li>
+<li>The value of the href attribute must be enclosed in quotation marks.</li>
+<li>It&apos;s essential to include <i>https://</i> in fixed URLs; otherwise, the browser may treat them as relative URLs instead.</li>
+</ul>
+
+<h3>Hyperlink with a Relative URL</h3>
+
+<p>Unlike a fixed URL, a relative URL links to another page within the same website. Below is an example:</p>
+
+<h4>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Relative URL&lt;/title&gt;<br>
+&nbsp;&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &nbsp;&nbsp;Click &lt;a href="hyperlink.html"&gt;here&lt;/a&gt; for the previous page.<br>
+&lt;/body&gt;<br>
+&nbsp;&lt;/html&gt;<br>
+</h4>
+
+<p>In this example, the hyperlink points to <i>hyperlink.html,</i> but without a full domain name. This means that the browser will look for the file in the same directory as the current page.</p>
+
+<h3>Linking to Files in Subfolders</h3>
+
+<p>If a webpage is stored in a subfolder, you need to specify its location relative to the current file.<br>
+Example:</p>
+
+<h4>
+&lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt;
+</h4>
+
+<p>This tells the browser to look inside the pages folder for <i>contact.html.</i><br>
+Relative URLs are particularly useful when developing websites because they allow internal links to remain functional even if the website is moved to a different domain.</p>
+
+<h3>Hyperlink with a Mailto URL</h3>
+
+<p>In addition to linking to webpages, hyperlinks can also create email links using the <i>mailto URL.</i> When clicked, a mailto link opens the user&apos;s default email application with a pre-filled recipient address.<br>
+Example:</p>
+
+<h4>
+&lt;a href="mailto:someone@example.com"&gt;Email me&lt;/a&gt;
+</h4>
+
+<p>When a user clicks this link, their email client <i>(e.g., Microsoft Outlook, Gmail)</i> will open with a new email draft addressed to <i>someone@example.com.</i></p>
+
+<h2>Images in HTML</h2>
+
+<p>To use images on a webpage, you use the img element. This element has no closing tag and is a self-closing element. All information about the image is stored within the attributes inside the opening tag.</p>
+
+<p>Here is an example of using an image in HTML:</p>
+
+<h4>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;An Image&lt;/title&gt;<br>
+&nbsp;&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &nbsp;&lt;p&gt;<br>
+        &nbsp;&nbsp;Here you can see my house.<br>
+        &lt;img src="house1.gif" alt="Roger's house." title="This is my house" width="150" height="188"&gt;<br>
+        &nbsp;&nbsp;It is a house made of pixels, a very strong material.<br>
+    &nbsp;&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&nbsp;&lt;/html&gt;<br>
+</h4>
+
+<h3>Important Attributes of the img Element</h3>
+
+<ul>
+<li><b>src (source)</b></li>
+<p>The src value defines the URL or file name of the image. If only a file name is given, like <i>house1.gif,</i> the browser treats it as a relative URL, meaning it assumes the image is in the same folder as the HTML file.</p>
+
+<li><b>alt (alternative text)</b></li>
+<p>The alt attribute provides a text description of the image in case the browser cannot load it. This is required for accessibility and search engine optimization <i>(SEO).</i></p>
+
+<li><b>title (tooltip)</b></li>
+<p>This attribute displays additional information when the user hovers over the image with the mouse. It does not work on touchscreens.</p>
+
+<li><b>height and width</b></li>
+<p>These attributes define the height and width of the image in pixels. You can specify only one (either height or width), and the browser will scale the image proportionally. Incorrect dimensions can distort the image or disrupt the webpage layout.</p>
+</ul>
+
+<p>Example of resizing an image:</p>
+
+<h4>
+&lt;img src="house1.gif" alt="Roger's house." width="75"&gt;
+</h4>
+
+<p>If no height is specified and the image fails to load, the page layout may shift since the browser doesn’t reserve space for the missing image.</p>
+
+<h3>Using Images as Hyperlinks</h3>
+
+<p>Sometimes, it is useful to make an image a hyperlink instead of text. This is commonly done with logos, which often link back to the homepage. You can achieve this by nesting the img element inside an a element:</p>
+
+<h4>
+&lt;a href="https://www.google.com/images?q=house"&gt;<br>
+    &nbsp;&lt;img src="house1.gif" alt="Roger's house." title="This is my house" width="150" height="188"&gt;<br>
+&lt;/a&gt;
+</h4>
+
+<p>When the user clicks on the image, the specified URL opens. In this example, the link leads to a Google image search for "house."</p>
+
+<img src="../content/Kiara's theories/KiaraTheory2.png" alt="Theory2" title="Hello...Mr. Teacher" height="350">
+
+<h2>Lists and Tables in HTML</h2>
+
+<p>HTML provides different ways to structure and display lists and tables. You can create three types of lists.</p>
+
+
+<h3>Unordered Lists (ul)</h3>
+
+<ul>
+<li>Uses bullet points to list items.</li>
+<li>Each item is enclosed in the <span class="tag-text">&lt;li&gt;</span> (list item) element.</li>
+<li>Example:</li>
+
+<h4>
+&lt;ul&gt;<br>
+  &nbsp;&lt;li&gt;Butter&lt;/li&gt;<br>
+  &nbsp;&lt;li&gt;Cheese&lt;/li&gt;<br>
+  &nbsp;&lt;li&gt;Eggs&lt;/li&gt;<br>
+&lt;/ul&gt;
+<h4>
+
+<li>This will display as:</li>
+</ul>
+
+<ul>
+	<li>Butter</li>
+	<li>Cheese</li>
+	<li>Eggs</li>
+</ul>
+
+<h3>Ordered Lists (ol)</h3>
+
+<ul>
+<li>Uses numbers instead of bullet points.</li>
+<li>The structure is the same as unordered lists but with the <span class="interactable">&lt;ol&gt;</span> element.</li>
+<li>Example:</li>
+
+<h4>
+&lt;ol&gt;<br>
+  &nbsp;&lt;li>Butter&lt;/li&gt;<br>
+  &nbsp;&lt;li>Cheese&lt;/li&gt;<br>
+  &nbsp;&lt;li>Eggs&lt;/li&gt;<br>
+&lt;/ol&gt;
+</h4>
+
+<li>This will display as:</li>
+</ul>
+
+<ol>
+	<li>Butter</li>
+	<li>Cheese</li>
+	<li>Eggs</li>
+</ol>
+
+<h3>Definition Lists (dl)</h3>
+
+<ul>
+<li>Used to define terms and their descriptions.</li>
+<li>Uses <span class="tag-text">&lt;dl&gt;</span> (definition list), <span class="tag-text">&lt;dt&gt;</span> (definition term), and <span class="tag-text">&lt;dd&gt;</span> (definition description).</li>
+<li>Example:</li>
+
+<h4>
+&lt;dl&gt;<br>
+  &nbsp;&lt;dt&gt;Butter&lt;/dt&gt;<br>
+  &nbsp;&lt;dd&gt;Churned cream from milk.&lt;/dd&gt;<br>
+  &nbsp;&lt;dt&gt;Cheese&lt;/dt&gt;<br>
+  &nbsp;&lt;dd&gt;Also made from milk.&lt;/dd&gt;<br>
+  &nbsp;&lt;dt&gt;Eggs&lt;/dt&gt;<br>
+  &nbsp;&lt;dd&gt;Eggs come from birds, not milk.&lt;/dd&gt;<br>
+&lt;/dl&gt;<br>
+</h4>
+
+<li>This will display as:</li>
+</ul>
+
+<dl>
+  <dt>Butter</dt>
+  <dd>Churned cream from milk.</dd>
+  <dt>Cheese</dt>
+  <dd>Also made from milk.</dd>
+  <dt>Eggs</dt>
+  <dd>Eggs come from birds, not milk.</dd>
+</dl>
+
+<img src="../content/Kiara's theories/KiaraTheory3a.png" alt="Theory 3" title="Stop checking the tooltips, Mr. Teacher" height="350">
+
+<h3>Tables in HTML</h3>
+
+<p>Tables are created using the <span class="tag-text">&lt;table&gt;</span> element. They consist of rows (<span class="tag-text">&lt;tr&gt;</span>) and cells (<span class="tag-text">&lt;td&gt;</span>).<br>
+Basic Table Structure:</td>
+
+<h4>
+&lt;table&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 1&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 2&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td>Cell 3&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td>Cell 4&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</h4>
+
+<p>This creates a simple table:</p>
+
+<table>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>Cell 3</td>
+    <td>Cell 4</td>
+  </tr>
+</table>
+
+<p>By default, tables have no borders. To add a border, use the border attribute:</p>
+
+<h4>
+&lt;table border="1"&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 1&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 2&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 3&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 4&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</h4>
+
+<p>This adds a 1-pixel border around the table.</p>
+
+<img src="../content/Kiara's theories/KiaraTheory3b.png" alt="Theory 3" title="What did I just say??? Watch out!! I WILL pull out my Camille-coded intrusive thoughts." width="350">
+
+<h3>Merging Cells</h3>
+
+<p>HTML allows you to merge multiple cells using the colspan (for columns) and rowspan (for rows) attributes.</p>
+
+<h3>Merging Columns (colspan)</h3>
+
+<p>To merge two columns:</p>
+
+<h4>
+&lt;table border="1"&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td colspan="2"&gt;Cell 1 & Cell 2&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 3&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 4&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</h4>
+
+<p>This makes "Cell 1 & Cell 2" span across two columns.</p>
+
+<table border="1">
+  <tr>
+    <td colspan="2">Cell 1 & Cell 2</td>
+  </tr>
+  <tr>
+    <td>Cell 3</td>
+    <td>Cell 4</td>
+  </tr>
+</table>
+
+<h3>Merging Rows (rowspan)</h3>
+
+<p>To merge two rows:</p>
+
+<h4>
+&lt;table border="1"&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td rowspan="2"&gt;Cell 1 & Cell 3&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 2&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+  &nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&lt;td&gt;Cell 4&lt;/td&gt;<br>
+  &nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</h4>
+
+<p>This makes "Cell 1 & Cell 3" span across two rows.</p>
+
+<table border="1">
+  <tr>
+    <td rowspan="2">Cell 1 & Cell 3</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>Cell 4</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+   

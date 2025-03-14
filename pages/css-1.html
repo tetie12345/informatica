@@ -1,0 +1,199 @@
+<HTML>
+  <head>
+  	<title>Charleys' CSS tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href='../style/style.css'>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/trailer.js"></script>
+  </head>
+  <body>
+	<div id="trailer">
+	</div>
+	<div class="navbar">
+		<a class="interactable" href='index.html' style="width: fit-content"><button>Home</button></a>
+        <a class="interactable" style="width: fit-content"><button>About us</button></a>
+	</div>
+
+	<div class="content" style="height: fit-content">
+        <h1 style="text-align: center;">PART 1: CSS</h1>
+<h2>CSS and Its Use with HTML</h2>
+
+<p>With HTML5, there is a clear separation between content (HTML pages) and design. The styling is done in a separate file known as a CSS file. CSS stands for <b>"Cascading Style Sheet”.</b></p>
+<p>The CSS file contains all the styling rules for the website and applies them to all HTML pages. This solves the problem of having to manually update the style on multiple pages—if you need to change the background color, you only need to update it in one place (the CSS file), and it will be applied to all pages.</p>
+<p>The CSS file is saved with the <b>.css</b> file extension, and it is common to name it <b>"style.css"</b>.</p>
+
+<img src="../content/Charley's theories/CharleyTheory2a.png" alt="good romance always starts with communication and understanding. bad romance always starts with rah rah oh rah rah" style="width: 24rem;">
+
+<h2>Linking CSS to HTML</h2>
+<p>To link a CSS file to an HTML file, you must include it inside the <span class="tag-text">&lt;head&gt;</span> element of the HTML document. The <span class="tag-text">&lt;head&gt;</span> section contains information about the website that is not directly visible on the page.</p>
+
+<p>To link the CSS file, add the following line inside the <span class="tag-text">&lt;head&gt;</span> section:</p>
+<h4>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</h4>
+
+<p>The updated <span class="tag-text">&lt;head&gt;</span> section now looks like this:</p>
+<h4>&lt;head&gt;
+    &lt;title&gt;Working with CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;/head&gt;</h4>
+
+<p>This <span class="tag-text">&lt;link&gt;</span> element has three attributes:</p>
+<ul>
+    <li><b>rel</b> – Specifies the relationship between the HTML document and the linked file (in this case, a stylesheet).</li>
+    <li><b>type</b> – Specifies the type of file being linked (always "text/css" for stylesheets).</li>
+    <li><b>href</b> – Defines the location and name of the CSS file.</li>
+</ul>
+
+<h2>Creating a CSS File</h2>
+<p>A CSS file is created similarly to an HTML file but is saved with the <span class="tag-text">.css</span> extension. It is common to name it <span class="tag-text">style.css</span>.</p>
+<p>Many code editors allow you to view multiple files side by side, so you can see both the HTML and CSS code at the same time.</p>
+
+<h3>CSS Selectors</h3>
+<p>CSS uses selectors to apply styles to HTML elements. The most common ones are:</p>
+<ul>
+    <li><b>Tag selectors</b> – apply styles to all elements of a given type.</li>
+    <li><b>ID selectors</b> – apply styles to specific elements with an ID.</li>
+</ul>
+
+<h2>Tag Selector Example</h2>
+<p>For example, an <span class="tag-text">&lt;h1&gt;</span> heading in HTML is usually black by default. To change its text color to red using CSS, add this code to <span class="tag-text">style.css</span>:</p>
+<h4>h1 {
+    color: red;
+}</h4>
+
+<h3>CSS Syntax</h3>
+<p>The structure of a CSS rule follows this format:</p>
+<h4>selector {
+    property: value;
+}</h4>
+
+<ul>
+    <li><b>The selector</b> defines which HTML element(s) the rule applies to.</li>
+    <li><b>The property</b> specifies the styling feature (e.g., color, font-size).</li>
+    <li><b>The value</b> defines the style to apply.</li>
+    <li><b>Each rule</b> ends with a semicolon (;).</li>
+</ul>
+
+<h2>Changing Text Color in CSS</h2>
+<p>You can define text color in three ways:</p>
+<ul>
+    <li><b>Keywords</b> – CSS has 140 predefined color names, such as red, blue, gray, gold, etc.</li>
+    <li><b>RGB values</b> – Define colors using Red, Green, and Blue values (0 to 255 each):</li>
+</ul>
+<h4>h1 {
+    color: rgb(0, 0, 255); /* Blue */
+}</h4>
+<ul>
+    <li><b>Hexadecimal values</b> – Represent colors in a shorter format, starting with #: </li>
+</ul>
+<h4>h1 {
+    color: #e07ae6; /* Purple */
+}</h4>
+
+<img src="../content/Charley's theories/CharleyTheory2b.png" alt="i don't know any good dad jokes" style="width: 32rem;">
+
+<h2>Setting a Background in CSS</h2>
+<p>You can change the background of a website in two ways:</p>
+<ul>
+    <li><b>Using a solid color:</b></li>
+</ul>
+<h4>body {
+    background-color: lightblue;
+}</h4>
+
+<ul>
+    <li><b>Using an image as the background:</b></li>
+</ul>
+<h4>body {
+    background-image: url('image.png');
+}</h4>
+
+<p>If the image is too small, the browser will tile it across the screen. Be mindful that different devices (smartphones, 4K monitors) have different screen sizes, so background images may not always display as intended.</p>
+
+<h2>Changing Fonts in CSS</h2>
+<p>To change the font of a website, use the font-family property:</p>
+<h4>body {
+    font-family: Verdana;
+}</h4>
+
+<p>It is recommended to specify multiple font options in case the user’s device does not have the primary font installed:</p>
+<h4>body {
+    font-family: Rockwell, Arial;
+}</h4>
+
+<p>In this example, if Rockwell is unavailable, Arial will be used instead.</p>
+
+<img src="../content/Charley's theories/CharleyTheory2c.png" alt="so how was your day Mr. teacher, my day was pretty good, i watched a movie" style="width: 32rem;">
+
+<h2>Adjusting Text Size</h2>
+<p>Browsers set default sizes for text, but you can override them using the font-size property:</p>
+<h4>h1 {
+    font-size: 32pt;
+}</h4>
+
+<p>Font size can be specified in different units:</p>
+<ul>
+    <li><b>Points (pt)</b> – Common in Word documents (e.g., 10pt–12pt for normal text).</li>
+    <li><b>Pixels (px)</b> – Fixed-size text.</li>
+    <li><b>Percentages (%)</b> – Relative to the default size.</li>
+    <li><b>Viewport width (vw)</b> – Adapts to screen size.</li>
+    <li><b>Em units (em)</b> – Relative to the parent element’s font size (e.g., 2em is twice the default size).</li>
+</ul>
+
+<p>You can also set multiple styles at once:</p>
+<h4>h1 {
+    font-family: Arial;
+    font-size: 24pt;
+    color: red;
+}</h4>
+
+<h2>Text Alignment in CSS</h2>
+<p>By default, text is left-aligned. You can change this using the text-align property:</p>
+<h4>h1 {
+    text-align: center;
+}</h4>
+
+<h4>p {
+    text-align: right;
+}</h4>
+
+<p>Available options:</p>
+<ul>
+    <li><b>left</b> (default)</li>
+    <li><b>right</b></li>
+    <li><b>center</b></li>
+    <li><b>justify</b> (stretches text to align with both left and right margins)</li>
+</ul>
+
+<h2>Text Formatting (Bold, Italic, Underline)</h2>
+<p>CSS provides three properties for text styling:</p>
+<ul>
+    <li><b>Bold</b>: font-weight: bold;</li>
+    <li><b>Italic</b>: font-style: italic;</li>
+    <li><b>Underline</b>: text-decoration: underline;</li>
+</ul>
+
+<p>Example:</p>
+<h4>h1 {
+    font-weight: normal; /* Removes bold from h1 */
+}</h4>
+
+<h4>p {
+    font-weight: bold; /* Makes paragraphs bold */
+}</h4>
+
+<p>For underlining, striking through, or adding a line above the text:</p>
+<h4>h1 {
+    text-decoration: line-through; /* Strikethrough */
+}</h4>
+
+<h4>h2 {
+    text-decoration: overline; /* Line above */
+}</h4>
+
+<h4>p {
+    text-decoration: underline; /* Underline */
+}</h4>
+
+	</div>
+  </body>
+</HTML>
